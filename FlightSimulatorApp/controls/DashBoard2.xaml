@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="FlightSimulatorApp.controls.DashBoard2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlightSimulatorApp.controls"
+             mc:Ignorable="d" Height="188.05" Width="391.6">
+    <Grid Margin="0,0,1,0" Background="#FFE2EAFC">
+        <Label x:Name="dashboard_lable" Content="DashBoard" HorizontalAlignment="Left" Margin="119,4,0,0" VerticalAlignment="Top" Height="34" Width="120" Foreground="#FF170000" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="air_speed" Content="Air Speed" HorizontalAlignment="Left" Margin="16,42,0,0" VerticalAlignment="Top" Height="30" Width="75" FontSize="14"/>
+        <Label x:Name="air_speed_val" Content="{Binding VM_Air_Speed, Mode=OneWay}"  HorizontalAlignment="Left" Margin="96,42,0,0" VerticalAlignment="Top" Height="30" Width="78" FontSize="14"/>
+        <Label x:Name="altitude" Content="Altitude" HorizontalAlignment="Left" Margin="16,66,0,0" VerticalAlignment="Top" Height="30" Width="74" FontSize="14"/>
+        <Label x:Name="altitude_val" Content="{Binding VM_Altitude, Mode=OneWay}" HorizontalAlignment="Left" Margin="96,66,0,0" VerticalAlignment="Top" Height="30" Width="78" FontSize="14"/>
+        <Label x:Name="roll" Content="Roll" HorizontalAlignment="Left" Margin="16,89,0,0" VerticalAlignment="Top" Height="30" Width="42" FontSize="14"/>
+        <Label x:Name="roll_val" Content="{Binding VM_Roll, Mode=OneWay}" HorizontalAlignment="Left" Margin="96,89,0,0" VerticalAlignment="Top" Height="27" Width="78" FontSize="14"/>
+        <Label x:Name="pitch" Content="Pitch" HorizontalAlignment="Left" Margin="16,115,0,0" VerticalAlignment="Top" Height="30" Width="56" FontSize="14"/>
+        <Label x:Name="pitch_val" Content="{Binding VM_Pitch, Mode=OneWay}" HorizontalAlignment="Left" Margin="96,115,0,0" VerticalAlignment="Top" Height="28" Width="78" FontSize="14"/>
+        <Label x:Name="altimeter" Content="Altimeter" HorizontalAlignment="Left" Margin="203,42,0,0" VerticalAlignment="Top" Height="30" Width="102" FontSize="14"/>
+        <Label x:Name="altimeter_val" Content="{Binding VM_Altimeter, Mode=OneWay}" HorizontalAlignment="Left" Margin="319,42,0,0" VerticalAlignment="Top" Height="28" Width="57" FontSize="14"/>
+        <Label x:Name="heading_deg" Content="Heading Degree" HorizontalAlignment="Left" Margin="203,66,0,0" VerticalAlignment="Top" Height="30" Width="113" FontSize="14" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="heading_deg_val" Content="{Binding VM_Heading_Degree, Mode=OneWay}" HorizontalAlignment="Left" Margin="319,66,0,0" VerticalAlignment="Top" Height="26" Width="58" FontSize="14"/>
+        <Label x:Name="ground_speed" Content="Ground Speed" HorizontalAlignment="Left" Margin="203,89,0,0" VerticalAlignment="Top" Height="28" Width="98" FontSize="14" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="ground_speed_val" Content="{Binding VM_Ground_Speed, Mode=OneWay}" HorizontalAlignment="Left" Margin="319,91,0,0" VerticalAlignment="Top" Height="26" Width="57" FontSize="14"/>
+        <Label x:Name="vertical_speed" Content="Vertical Speed" HorizontalAlignment="Left" Margin="203,114,0,0" VerticalAlignment="Top" Height="27" Width="103" FontSize="14"/>
+        <Label x:Name="vertical_speed_val" Content="{Binding VM_Vertical_Speed, Mode=OneWay}" HorizontalAlignment="Left" Margin="319,115,0,0" VerticalAlignment="Top" Height="27" Width="57" FontSize="14"/>
+        <Label x:Name="errorLabel" Content="" HorizontalAlignment="Left" Height="30" Margin="27,150,0,0" VerticalAlignment="Top" Width="351" Foreground="Red" FontSize="15"/>
+
+    </Grid>
+</UserControl>

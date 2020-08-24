@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="FlightSimulatorApp.controls.MainController"
+             xmlns:Controls="clr-namespace:FlightSimulatorApp.controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FlightSimulatorApp.controls"
+             mc:Ignorable="d"  d:DesignHeight="575.781" d:DesignWidth="925.564">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Controls:Joystick x:Name="joystick" Margin="-26,-13,25.6,12" RenderTransformOrigin="0.5,0.5">
+            <local:Joystick.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.282"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:Joystick.RenderTransform>
+        </Controls:Joystick>
+        <Label x:Name="aileron_label" Content="Aileron:" HorizontalAlignment="Left" Margin="106,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="28" Foreground="White">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.063"/>
+                    <RotateTransform Angle="-89.962"/>
+                    <TranslateTransform Y="0.014"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="throttle_label" Content="Throttle:" HorizontalAlignment="Left" Margin="356,522,0,-22" FontSize="28" Foreground="White"/>
+        <Label x:Name="aileron_val" Content="{Binding Value, ElementName=aileron_slider}" HorizontalAlignment="Left" Height="44" Margin="65,252,0,0" VerticalAlignment="Top" Width="83"  ContentStringFormat="{}{0:F2}" FontSize="28" Foreground="White"/>
+        <Label x:Name="throttle_val" Content="{Binding Value, ElementName=throttle_slider}" HorizontalAlignment="Left" Height="56" Margin="482,522,0,-2" VerticalAlignment="Top" Width="129"  ContentStringFormat="{}{0:F2}" FontSize="28" Foreground="White"/>
+        <Label Content="&lt;--Rudder--&gt;" HorizontalAlignment="Left" Margin="357,0,0,513" VerticalAlignment="Bottom" Width="184" Height="45" FontSize="28" Foreground="White"/>
+        <Label x:Name="elevator_val" Content="{Binding VM_Elevator, Mode=OneWayToSource}" HorizontalAlignment="Left" Height="44" Margin="713,248,0,0" VerticalAlignment="Top" Width="117" FontSize="28" Foreground="White"/>
+        <Label x:Name="rudder_val" Content="{Binding VM_Rudder, Mode=OneWayToSource}" HorizontalAlignment="Left" Height="43" Margin="408,-16,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" FontSize="28" Foreground="White">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.815"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="elevator_label" Content="&lt;--Elevator--&gt;" HorizontalAlignment="Left" Margin="599,252,0,0" VerticalAlignment="Top" Width="190" Height="45" FontSize="28" RenderTransformOrigin="0.5,0.5" Foreground="White">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="89.571"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+        <Slider x:Name="aileron_slider" HorizontalAlignment="Left" Height="341" Margin="180,108,0,127" VerticalAlignment="Center" Width="40" Orientation="Vertical" VerticalContentAlignment="Center" TickPlacement="TopLeft" Maximum="1" Minimum="-1" Value="{Binding VM_Aileron}" Foreground="Black" />
+        <Slider x:Name="throttle_slider" HorizontalAlignment="Left" Height="26" Margin="259,506,0,0" VerticalAlignment="Top" Width="352" TickPlacement="BottomRight" Maximum="1" Minimum="0" Value="{Binding VM_Throttle}" Foreground="Black" Background="{x:Null}" BorderBrush="{x:Null}"/>
+    </Grid>
+</UserControl>
